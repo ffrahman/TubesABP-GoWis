@@ -48,7 +48,7 @@
                     <div class="card">
                       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/mobil/avanza.webp') }}" class="img-fluid" />
-                        <a href="/form">
+                        <a href="/form-sewa">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
@@ -58,7 +58,7 @@
                           Some quick example text to build on the card title and make up the bulk of the
                           card's content.
                         </p>
-                        <a href="/form" class="btn btn-primary">Sewa</a>
+                        <a href="/form-sewa" class="btn btn-primary">Sewa</a>
                       </div>
                     </div>
                   </div>
@@ -67,7 +67,7 @@
                     <div class="card">
                       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/mobil/brio.webp') }}" class="img-fluid" />
-                        <a href="/form">
+                        <a href="/form-sewa">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
@@ -77,7 +77,7 @@
                           Some quick example text to build on the card title and make up the bulk of the
                           card's content.
                         </p>
-                        <a href="/form" class="btn btn-primary">Sewa</a>
+                        <a href="/form-sewa" class="btn btn-primary">Sewa</a>
                       </div>
                     </div>
                   </div>
@@ -85,7 +85,7 @@
                     <div class="card">
                       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/mobil/pajeroo.webp') }}" class="img-fluid" />
-                        <a href="/form">
+                        <a href="/form-sewa">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
@@ -95,7 +95,7 @@
                           Some quick example text to build on the card title and make up the bulk of the
                           card's content.
                         </p>
-                        <a href="/form" class="btn btn-primary">Sewa</a>
+                        <a href="/form-sewa" class="btn btn-primary">Sewa</a>
                       </div>
                     </div>
                   </div>
@@ -103,7 +103,7 @@
                     <div class="card">
                       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/mobil/inova.webp') }}" class="img-fluid" />
-                        <a href="/form">
+                        <a href="/form-sewa">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
@@ -113,7 +113,7 @@
                           Some quick example text to build on the card title and make up the bulk of the
                           card's content.
                         </p>
-                        <a href="/form" class="btn btn-primary">Sewa</a>
+                        <a href="/form-sewa" class="btn btn-primary">Sewa</a>
                       </div>
                     </div>
                   </div>
@@ -124,7 +124,7 @@
                     <div class="card">
                       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/motor/klx.webp') }}" class="img-fluid" />
-                        <a href="/form">
+                        <a href="/form-sewa">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
@@ -134,7 +134,7 @@
                           Some quick example text to build on the card title and make up the bulk of the
                           card's content.
                         </p>
-                        <a href="/form" class="btn btn-primary">Sewa</a>
+                        <a href="/form-sewa" class="btn btn-primary">Sewa</a>
                       </div>
                     </div>
                   </div>
@@ -143,7 +143,7 @@
                     <div class="card">
                       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/motor/nmax.webp') }}" class="img-fluid" />
-                        <a href="/form">
+                        <a href="/form-sewa">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
@@ -153,7 +153,7 @@
                           Some quick example text to build on the card title and make up the bulk of the
                           card's content.
                         </p>
-                        <a href="/form" class="btn btn-primary">Sewa</a>
+                        <a href="/form-sewa" class="btn btn-primary">Sewa</a>
                       </div>
                     </div>
                   </div>
@@ -161,7 +161,7 @@
                     <div class="card">
                       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/motor/scoopy.webp') }}" class="img-fluid" />
-                        <a href="/form">
+                        <a href="/form-sewa">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
@@ -171,7 +171,7 @@
                           Some quick example text to build on the card title and make up the bulk of the
                           card's content.
                         </p>
-                        <a href="/form" class="btn btn-primary">Sewa</a>
+                        <a href="/form-sewa" class="btn btn-primary">Sewa</a>
                       </div>
                     </div>
                   </div>
@@ -180,7 +180,7 @@
                     <div class="card">
                       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ asset('img/motor/supra.webp') }}" class="img-fluid" />
-                        <a href="/form">
+                        <a href="/form-sewa">
                           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                       </div>
@@ -190,7 +190,7 @@
                           Some quick example text to build on the card title and make up the bulk of the
                           card's content.
                         </p>
-                        <a href="/form" class="btn btn-primary">Sewa</a>
+                        <a href="/form-sewa" class="btn btn-primary">Sewa</a>
                       </div>
                     </div>
                   </div>

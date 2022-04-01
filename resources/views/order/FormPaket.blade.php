@@ -48,15 +48,13 @@
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
         <select name="department" class="form-control selectpicker">
-          <option value="">Pilih merk Kendaraan</option>
-          <option>Toyota inova</option>
-          <option>Honda Brio</option>
-          <option >Pajero Sport</option>
-          <option >Toyota Avanza</option>
-          <option >Kawasaki KLX</option>
-          <option >Honda Supra</option>
-          <option >Honda Scoopy</option>
-          <option >Yamaha Nmax</option>
+          <option value="">Pilih Paket Wisata</option>
+          <option>Paket Wisata Begonia</option>
+          <option>Paket Wisata Asia Africa</option>
+          <option >Paket Wisata Ciater</option>
+          <option >Paket Wisata Cikole</option>
+          <option >Paket Wisata Kawah Putih</option>
+          <option >Paket Wisata Lembang Zoo</option>
         </select>
       </div>
     </div>

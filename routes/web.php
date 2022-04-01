@@ -35,6 +35,10 @@ Route::get('/register', function () {
 Route::get('/admin', function () {
     return view('admin.Dashboard');
 });
-Route::get('/form', function () {
+Route::get('/form-sewa', function () {
     return view('order.FormSewa');
+});
+
+Route::get('/form-paket', function () {
+    return view('order.FormPaket');
 });
