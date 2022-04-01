@@ -110,7 +110,7 @@
               <p>paket 2 hari:
                 <br>Villa (4 tempat tidur), makan pagi, akses masuk wisata</br>
               </p>
-              <p><a class="btn btn-secondary" href="#">Beli paket &raquo;</a></p>
+              <p><a class="btn btn-secondary" href="/form-paket">Beli paket &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
 
 
@@ -126,7 +126,7 @@
               <p>paket 4 hari:
                 <br>Villa (5 tempat tidur), makan pagi dan siang, akses masuk wisata</br>
               </p>
-              <p><a class="btn btn-secondary" href="#">Beli paket &raquo;</a></p>
+              <p><a class="btn btn-secondary" href="/form-paket">Beli paket &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
 
             <div class="col-lg-4">
@@ -141,7 +141,7 @@
               <p>paket 2 hari
                 <br>pemandian air hangat 24 jam, Villa(4 tempat tidur), akses masuk wisata</br>
               </p>
-              <p><a class="btn btn-secondary" href="#">Beli paket &raquo;</a></p>
+              <p><a class="btn btn-secondary" href="/form-paket">Beli paket &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
 
           </div><!-- /.row -->
@@ -160,7 +160,7 @@
               <p>Paket 7 hari
                 <br>Villa (4 tempat tidur), makan pagi, akses masuk tempat wisata</br>
               </p>
-              <p><a class="btn btn-secondary" href="#">Beli paket &raquo;</a></p>
+              <p><a class="btn btn-secondary" href="/form-paket">Beli paket &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
 
             
@@ -176,7 +176,7 @@
               <p>Paket 2 hari
                 <br>Villa (4 tempat tidur), fotografer</br>
               </p>
-              <p><a class="btn btn-secondary" href="#">Beli paket &raquo;</a></p>
+              <p><a class="btn btn-secondary" href="/form-paket">Beli paket &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
 
             <div class="col-lg-4">
@@ -191,7 +191,7 @@
               <p>Paket 2 hari
                 <br>Villa (4 tempat tidur), akses masuk wisata</br>
               </p>
-              <p><a class="btn btn-secondary" href="#">Beli paket &raquo;</a></p>
+              <p><a class="btn btn-secondary" href="/form-paket">Beli paket &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
           </div><!-- /.row -->
     
