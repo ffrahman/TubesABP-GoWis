@@ -1,95 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Go Wis | Login</title>
-
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
-    rel="stylesheet"
-    />
     <style>
-        .gradient-custom-2 {
-  /* fallback for old browsers */
-  background: #fccb90;
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
-}
 
-@media (min-width: 768px) {
-  .gradient-form {
-    height: 100vh !important;
-  }
-}
-@media (min-width: 769px) {
-  .gradient-custom-2 {
-    border-top-right-radius: .3rem;
-    border-bottom-right-radius: .3rem;
-  }
-}
     </style>
-</head>
-<body>
-    @include('layout.navbar')
-    <div>
-        <section class="h-100 gradient-form" style="background-color: #eee;">
-            <div class="container py-5 h-100">
-              <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-xl-10">
-                  <div class="card rounded-6 text-black">
-                    <div class="row g-0">
-                      <div class="col-lg-6">
-                        <div class="card-body p-md-5 mx-md-4">
-          
-                          <div class="text-center">
-                            <h4 class="mt-1 mb-5 pb-1">Please login to your account</h4>
-                          </div>
-          
-                          <form>
-                            
-          
-                            <div class="form-outline mb-4">
-                              <input type="email" id="form2Example11" class="form-control" placeholder="email address"/>
-                              <label class="form-label" for="form2Example11">Email</label>
-                            </div>
-          
-                            <div class="form-outline mb-4">
-                              <input type="password" id="form2Example22" class="form-control" />
-                              <label class="form-label" for="form2Example22">Password</label>
-                            </div>
-          
-                            <div class="text-center pt-1 mb-5 pb-1">
-                              <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log in</button>
-                            </div>
-          
-                            <div class="d-flex align-items-center justify-content-center pb-4">
-                              <p class="mb-0 me-2">Don't have an account?</p>
-                              <button type="button" class="btn btn-outline-danger"><a href="/register">Register</a></button>
-                            </div>
-          
-                          </form>
-          
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="card-body p-md-4 mx-md-4">
-                        <div class="text-center">
-                            <img src="{{ asset('img/begonia.jpg') }}" alt="" class="img-fluid rounded-6">
-                        </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+    <link rel="stylesheet" href="{{ asset('css/signin.css') }}">
+  </head>
+  <body class="text-center row justify-content-center">
+    <div class="col-md-5">
+      <main class="form-signin">
+        <form>
+          <img class="mb-4 rounded-circle" src="{{ asset('img/gowis.jpg') }}" alt="" width="100" height="100">
+          <h1 class="h3 mb-3 fw-normal">Please Login</h1>
+      
+          <div class="form-floating">
+            <input type="email" class="form-control" id="email" placeholder="Email">
+            <label for="email">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="password" placeholder="password">
+            <label for="password">Password</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+        </form>
+        <small class="d-block mt-3" >Not register? <a href="/register">Register now!</a></small>
+      </main>
     </div>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
-</body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>
