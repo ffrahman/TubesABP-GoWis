@@ -39,11 +39,11 @@
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
               </div>
+
               <div class="card-body">
-                <h5 class="card-title">Post title</h5>
+                <h5 class="card-title">{{ $beritas->title }}</h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
+                  {{ $beritas->description }}
                 </p>
                 <a href="#!" class="btn btn-primary">Read</a>
               </div>

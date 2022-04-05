@@ -2,6 +2,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
     rel="stylesheet"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -49,12 +51,31 @@
           </li>
         </ul>
         <!-- Left links -->
-  
-        <div class="d-flex align-items-center">
-          <button type="button" class="btn btn-link px-3 me-2">
-            <a href="/login">Login</a>
-          </button>
-        </div>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          @auth
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Welcome back, {{ Auth::user()->name }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i> my profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <form action="/logout" method="POST">
+                  @csrf
+                  <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-right"></i> logout</button>
+                </form>
+              </li>
+            </ul>
+          </li>
+          @else
+            <div class="d-flex align-items-center">
+              <button type="button" class="btn btn-link px-3 me-2">
+                <a href="/login">Login</a>
+              </button>
+            </div>
+          @endauth
+        </ul>
       </div>
       <!-- Collapsible wrapper -->
     </div>

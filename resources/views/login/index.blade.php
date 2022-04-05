@@ -28,18 +28,38 @@
     <link rel="stylesheet" href="{{ asset('css/signin.css') }}">
   </head>
   <body class="text-center row justify-content-center">
+    @include('layout.navbar')
     <div class="col-md-5">
       <main class="form-signin">
-        <form>
+        @if(session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+        @if(session('login'))
+            <div class="alert alert-danger">
+                {{ session('login') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+        <form action="/login" method="POST">
+          @csrf
           <img class="mb-4 rounded-circle" src="{{ asset('img/gowis.jpg') }}" alt="" width="100" height="100">
           <h1 class="h3 mb-3 fw-normal">Please Login</h1>
       
           <div class="form-floating">
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Email" autofocus required>
             <label for="email">Email address</label>
+            @error('email')
+                <div class="invalid-feedback" role="alert">
+                    {{ $message }}
+                </div>
+              
+            @enderror
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="password">
+            <input type="password" name="password" class="form-control" id="password" placeholder="password" required>
             <label for="password">Password</label>
           </div>
           <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
