@@ -95,7 +95,7 @@
                 <p class="card-text">
                     Tak hanya keindahan bunga yang menarik, taman ini juga memiliki daya tarik pada tata letak taman yang sangat menarik.
                 </p>
-                <a href="#!" class="btn btn-primary">Lihat Wisata</a>
+                {{-- <a href="#!" class="btn btn-primary">Lihat Wisata</a> --}}
                 </div>
             </div>
             </div>
@@ -116,7 +116,7 @@
                 <p class="card-text">
                     Tempat wisata Lembang ini menjadi salah satu obyek wisata yang baru dan sangat instagramable. Moms bisa melakukan foto bersama dengan rumah hobbit yang hits di sosial media.
                 </p>
-                <a href="#!" class="btn btn-primary">Lihat Wisata</a>
+                {{-- <a href="#!" class="btn btn-primary">Lihat Wisata</a> --}}
                 </div>
             </div>
             </div>
@@ -137,7 +137,7 @@
                 <p class="card-text">
                     Kawah Putih Ciwidey juga jadi salah satu rekomendasi tempat wisata Lembang terfavorit.
                 </p>
-                <a href="#!" class="btn btn-primary">Lihat Wisata</a>
+                {{-- <a href="#!" class="btn btn-primary">Lihat Wisata</a> --}}
                 </div>
             </div>
             </div>
