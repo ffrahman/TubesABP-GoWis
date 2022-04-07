@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
     <!-- Container wrapper -->
     <div class="container">
       <!-- Navbar brand -->
@@ -16,11 +16,10 @@
             alt="Go-wis Logo"
             class="rounded-circle"
             loading="lazy"
-            style="margin-top: -1px;"
-            width="50"
-            height="50"
+            width="40px"
+            height="40px"
         />
-        <span class="gowis mx-3">Go-Wis</span>
+        <span class="gowis mx-3">Go Wis</span>
       </a>
   
       <!-- Toggle button -->
@@ -58,7 +57,7 @@
               Welcome back, {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i> my profile</a></li>
+              <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard</a></li>
               <li><hr class="dropdown-divider"></li>
               <li>
                 <form action="/logout" method="POST">
@@ -70,8 +69,8 @@
           </li>
           @else
             <div class="d-flex align-items-center">
-              <button type="button" class="btn btn-link px-3 me-2">
-                <a href="/login">Login</a>
+              <button type="button" class="btn btn-light px-3 me-2">
+                <a style="text-decoration: none" href="/login">Login <i class="bi bi-box-arrow-in-left"></i></a>
               </button>
             </div>
           @endauth

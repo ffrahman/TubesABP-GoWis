@@ -32,9 +32,6 @@
 
       /* Height for devices larger than 576px */
       @media (min-width: 992px) {
-        #introCarousel {
-          margin-top: -58.59px;
-        }
         #introCarousel,
         .carousel-inner,
         .carousel-item,
@@ -42,21 +39,13 @@
           height: 65vh;
         }
       }
-
-      .navbar .nav-link {
-        color: #fff !important;
-      }
-      .lo:hover {
-        color: aqua !important;
-      }
-
       .gowis {
         font-family: 'Lato', sans-serif;
         font-weight: bold;
     }
     </style>
 
-    @include('layout.navbarcarousel')
+    {{-- @include('layout.navbarcarousel') --}}
 
     <!-- Carousel wrapper -->
     <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
@@ -74,23 +63,8 @@
           <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
-                <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
-                <h5 class="mb-4">Best & free guide of responsive web design</h5>
-                <a
-                  class="btn btn-outline-light btn-lg m-2"
-                  href="https://www.youtube.com/watch?v=c9B4TPnak1A"
-                  role="button"
-                  rel="nofollow"
-                  target="_blank"
-                  >Start tutorial</a
-                >
-                <a
-                  class="btn btn-outline-light btn-lg m-2"
-                  href="https://mdbootstrap.com/docs/standard/"
-                  target="_blank"
-                  role="button"
-                  >Download MDB UI KIT</a
-                >
+                <h1 class="mb-3">Selamat Datang di Go Wis</h1>
+                <h5 class="mb-4"></h5>
               </div>
             </div>
           </div>
@@ -124,10 +98,10 @@
                 <h2>And cover it with any mask</h2>
                 <a
                   class="btn btn-outline-light btn-lg m-2"
-                  href="https://mdbootstrap.com/docs/standard/content-styles/masks/"
+                  href="https://www.google.com/search?q=lembang&rlz=1C1CHBD_enID970ID970&oq=lembang&aqs=chrome..69i57j46i433i512j46i175i199i512l2j46i175i199i433i512j0i512l4j46i175i199i512.1832j0j7&sourceid=chrome&ie=UTF-8"
                   target="_blank"
                   role="button"
-                  >Learn about masks</a
+                  >About Go wis</a
                 >
               </div>
             </div>

@@ -43,7 +43,12 @@
                   >
                 <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i> My profile</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-in-right"></i> Logout</a></li>
+
+                <li>
+                  <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-right"></i> Logout</button>
+                  </form>
               </ul>
               @else
                 <div class="d-flex align-items-center">

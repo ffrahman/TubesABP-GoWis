@@ -30,6 +30,7 @@
   <body class="text-center row justify-content-center">
     @include('layout.navbar')
     <div class="col-md-5">
+      <br><br><br><br>
       <main class="form-signin">
         @if(session('status'))
             <div class="alert alert-success">
@@ -67,7 +68,14 @@
         <small class="d-block mt-3" >Not register? <a href="/register">Register now!</a></small>
       </main>
     </div>
-
+    
+    {{-- footer --}}
+    <div class="container">
+      <br><br><br>
+      <br><br><br>
+      <br><br>
+      @include('layout.footer')
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

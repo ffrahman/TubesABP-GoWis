@@ -28,7 +28,9 @@
     <link rel="stylesheet" href="{{ asset('css/signin.css') }}">
   </head>
   <body class="row justify-content-center">
-    <div class="col-md-5">
+    @include('layout.navbar')
+    <div class="col-lg-4 mt-5">
+      <br><br><br>
       <div class="text-center">
         <img class="mb-5 rounded-circle" src="{{ asset('img/gowis.jpg') }}" alt="" width="100" height="100">
       </div>
@@ -78,6 +80,12 @@
         <small class="d-block mt-3" >Already register? <a href="/login">Login now!</a></small>
       </main>
     </div>
+    {{-- footer --}}
+    <div class="container text-center">
+      <br><br><br>
+      <br><br>
+      @include('layout.footer')
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -89,5 +97,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+    
   </body>
 </html>

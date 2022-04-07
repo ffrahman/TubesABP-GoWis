@@ -28,7 +28,7 @@ Route::get('/sewaKendaraan', function () {
 
 
 Route::get('/', [WelcomeController::class, 'index']);
-Route::get('/berita', [BeritaController::class, 'index'])->middleware('auth');
+Route::get('/berita', [BeritaController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -38,8 +38,8 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 
-Route::get('/admin', function () {
-    return view('admin.Dashboard');
+Route::get('/dashboard', function () {
+    return view('Dashboard.index');
 });
 Route::get('/form-sewa', function () {
     return view('order.FormSewa');
