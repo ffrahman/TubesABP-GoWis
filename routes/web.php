@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Berita;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::get('/sewaKendaraan', function () {
 
 
 Route::get('/', [WelcomeController::class, 'index']);
-Route::get('/berita', [BeritaController::class, 'index']);
+// Route::get('/berita', [BeritaController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -48,3 +49,7 @@ Route::get('/form-sewa', function () {
 Route::get('/form-paket', function () {
     return view('order.FormPaket');
 });
+
+
+Route::get('/berita', [BeritaController::class, 'index']);
+Route::get('/berita/{news}', [BeritaController::class, 'show']);

@@ -17,28 +17,14 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $beritas = Berita::latest()->paginate(5);
-        return view('berita', compact('beritas'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        $beritas = Berita::all();
+        return view('berita', compact('beritas'));
     }
 
-    public function store(Request $request)
+    public function show(Berita $news)
     {
-        $request->validate([
-            'gambar' => 'required',
-            'judul' => 'required',
-            'isi' => 'required',
+        return view('news', [
+            "berita" => $news
         ]);
-
-        Berita::create($request->all());
-
-        return redirect()->route('admin.berita.index')
-            ->with('success', 'created successfully.');
-    }
-
-    public function edit($id)
-    {
-        $berita = Berita::find($id);
-        return view('edit', compact('berita'));
     }
 }

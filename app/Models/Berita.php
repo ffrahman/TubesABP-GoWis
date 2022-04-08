@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Berita extends Model
 {
     use HasFactory;
-    protected $fillaable = ['gambar', 'judul', 'isi'];
+
+    protected $guarded = ['id'];
 }

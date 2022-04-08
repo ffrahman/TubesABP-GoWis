@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{ asset('img/Go-Wis.png') }}">
     <title>Go Wis | @yield('title')</title>
 
     <!-- Font Awesome -->
@@ -26,7 +27,7 @@
 </head>
 <body>
     @include('layout.navbar')
-    <div class="mt-4">
+    <div class="mt-4 ">
       @yield('content')
     </div>
    
