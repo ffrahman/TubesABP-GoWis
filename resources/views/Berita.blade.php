@@ -13,7 +13,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ $berita->judul }}</h5>
         <p class="card-text">{{ $berita->excerpt }}</p>
-        <a href="/berita/{{ $berita->id }}" class="btn btn-primary">Read more</a>
+        <a href="/berita/{{ $berita->slug }}" class="btn btn-primary">Read more</a>
       </div>
     </div>
    @endforeach

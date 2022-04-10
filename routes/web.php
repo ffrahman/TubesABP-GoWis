@@ -1,12 +1,13 @@
 <?php
 
+use App\Models\Berita;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\RegisterController;
-use App\Models\Berita;
+use App\Http\Controllers\DashboardBeritaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,4 +53,6 @@ Route::get('/form-paket', function () {
 
 
 Route::get('/berita', [BeritaController::class, 'index']);
-Route::get('/berita/{news}', [BeritaController::class, 'show']);
+Route::get('/berita/{news:slug}', [BeritaController::class, 'show']);
+
+Route::resource('dashboard/berita', DashboardBeritaController::class)->middleware('auth');
