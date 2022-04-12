@@ -24,10 +24,16 @@
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
+
+    <Style>
+      .apa{
+        background-color:rgba(241, 241, 13, 0.819);
+      }
+    </Style>
 </head>
 <body>
     @include('layout.navbar')
-    <div class="mt-4 ">
+    <div class="apa">
       @yield('content')
     </div>
    

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-warning">
     <!-- Container wrapper -->
     <div class="container">
       <!-- Navbar brand -->
@@ -40,13 +40,13 @@
         <!-- Left links -->
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/paketWisata">Paket Wisata</a>
+            <a class="nav-link {{ Request::is('paketWisata') ? 'active' : '' }}" href="/paketWisata">Paket Wisata</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/sewaKendaraan">Sewa Kendaraan</a>
+            <a class="nav-link {{ Request::is('sewaKendaraan') ? 'active' : '' }}" href="/sewaKendaraan">Sewa Kendaraan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/berita">Berita</a>
+            <a class="nav-link {{ Request::is('berita') ? 'active' : '' }}" href="/berita">Berita</a>
           </li>
         </ul>
         <!-- Left links -->

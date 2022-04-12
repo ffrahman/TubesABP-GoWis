@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Category;
+use Illuminate\Support\Str;
+use function Ramsey\Uuid\v1;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +20,7 @@ class DashboardBeritaController extends Controller
     public function index()
     {
         return view('Dashboard.Berita.index', [
-            'berita' => Berita::all()
+            'beritas' => Berita::all()
         ]);
     }
 
@@ -27,7 +31,9 @@ class DashboardBeritaController extends Controller
      */
     public function create()
     {
-        //
+        return view('Dashboard.Berita.create', [
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -38,7 +44,18 @@ class DashboardBeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'judul' => 'required|max:255',
+            'slug' => 'required',
+            'kategori' => 'required',
+            'isi' => 'required',
+        ]);
+
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->isi, 200));
+
+        Berita::create($validatedData);
+
+        return redirect('/dashboard/berita')->with('success', 'Berita berhasil ditambahkan');
     }
 
     /**
@@ -49,9 +66,8 @@ class DashboardBeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        return $berita::find($berita->id);
+        //
     }
-
     /**
      * Show the form for editing the specified resource.
      *

@@ -8,6 +8,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardBeritaController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +57,11 @@ Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/berita/{news:slug}', [BeritaController::class, 'show']);
 
 Route::resource('dashboard/berita', DashboardBeritaController::class)->middleware('auth');
+
+
+Route::get('/categories/{category:slug}', function (Category $category) {
+    return view('category', [
+        'category' => $category->name,
+        'beritas' => $category->beritas,
+    ]);
+});

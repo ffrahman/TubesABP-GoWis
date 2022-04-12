@@ -4,8 +4,22 @@
   Sewa Kendaraan
 @endsection
 
+<style>
+  .ma{
+    /* background-color: gainsboro; */
+    background-image: url("{{ asset('img/bck.jpg') }}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 55%;
+  }
+  h1{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+  }
+</style>
 @section('content')
-<header>
+{{-- <header>
   <!-- Background image -->
   <div
     class="p-5 text-center bg-image"
@@ -20,9 +34,21 @@
   <!--Main layout-->
   <br>
   <br>
-  <br>
+  <br> --}} 
+  <div class="ma">
+    <div class="text-center"> 
+      <br>
+      <h1>Rental kendaraan Lembang</h1>
+      <img class="mot" src="{{ asset('img/motor/motor.webp') }}" alt="">
+      <img class="mob" src="{{ asset('img/mobil/rental-mobil.png.webp') }}" alt="">
+      <div class="container">
+        <h3>Rental kendaraan Lembang murah akan lebih mudah jika memesannya secara online di Go Wis. Kami menyediakan sewa mobil dan motor lepas kunci. Tersedia rental mobil dan motor dengan durasi harian, mingguan hingga sewa mobil bulanan.</h3>
+      </div>
+    </div>
+  </div>
   <div class="container">
       <section class="text-center">
+        <br>
           <h4 class="mb-5"><strong>Sewa Mobil & Motor</strong></h4>
   
           <div class="row" >

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Berita extends Model
 {
@@ -14,5 +15,10 @@ class Berita extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }
