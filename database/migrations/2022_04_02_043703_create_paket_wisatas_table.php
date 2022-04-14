@@ -15,10 +15,9 @@ class CreatePaketWisatasTable extends Migration
     {
         Schema::create('paket_wisatas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_paket');
+            $table->string('nama_paket')->unique();
             $table->string('gambar');
-            $table->string('slug')->unique();
-            $table->integer('harga');
+            $table->string('harga');
             $table->integer('durasi');
             $table->text('deskripsi');
 

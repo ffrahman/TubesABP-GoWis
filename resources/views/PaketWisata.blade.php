@@ -17,24 +17,26 @@
   <h2>Detail Wisata</h2>
 </div>
 
-<div class="container marketing">
-
+<div class="container d-flex flex-wrap justify-content-center m-auto text-center">
+  @foreach ($paketwisatas as $paket)
   <!-- Three columns of text below the carousel -->
-  <div class="row">
-    <div class="col-lg-4">
-      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ asset('img/begonia.jpg') }}"
-        role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+  <div class="col-md-4 col-sm-6 mb-3 m-3" style="width: 20rem; position: relative;">
+    <hr>
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ $paket->gambar }}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
         <title></title>
         <rect width="100%" height="100%" fill="#77 7" /><text x="50%" y="50%" fill="#777" dy=".3em"></text>
       </img>
-      
-      <h2>Paket Wisata Begonia</h2>
-      <p>Harga paket Rp 300.000,00</p>
-      <p>paket 2 hari:</p>
-      <p>Villa (4 tempat tidur), makan pagi, akses masuk wisata</p>
-      <p><a class="btn btn-secondary" href="/form-paket"><i class="bi bi-whatsapp"></i> Contact Now!</a></p>
+    
+      <h2>{{ $paket->nama_paket }}</h2>
+      <p>Harga paket Rp. {{ $paket->harga }} </p>
+      <p>paket {{ $paket->durasi }} hari:</p>
+      <p>{{ $paket->deskripsi }}</p>
+      <p><a class="btn btn-secondary" href="https://wa.wizard.id/b18f79"><i class="bi bi-whatsapp"></i> Contact Now!</a></p>
+      <hr>
     </div>
+    @endforeach
   </div>
+</div>
 @endsection
 {{-- <div class="container d-flex flex-wrap justify-content-center m-auto">
     @foreach ($beritas as $berita)

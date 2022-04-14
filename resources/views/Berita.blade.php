@@ -25,8 +25,6 @@
         <div class="card-body">
           <h5 class="card-title">{{ $berita->judul }}</h5>
           <p class="card-text">{{ $berita->excerpt }}</p>
-          {{-- last update laravel --}}
-          {{-- <p class="card-text"><small class="text-muted">Last updated {{ $berita->updated_at->diffForHumans() }}</small></p> --}}
           <p class="card-text"><small class="text-muted">Last updated   {{ $berita->updated_at->diffForHumans() }}</small></p>
         </div>
         <div class="col text-right aa">
