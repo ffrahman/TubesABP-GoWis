@@ -7,6 +7,8 @@
 @section('content')
 @include('layout.carousel')
 <div class="container">
+    <h1>Mau Liburan Kemana Kalian ?</h1>
+    <hr>
     <div class="row">
         <div class="col-md-6 gx-5 mb-4">
             <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
@@ -20,15 +22,20 @@
         <div class="col-md-6 gx-5 mb-4">
             <h4><strong>Lembang PARK & ZOO</strong></h4>
             <p class="text-muted">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
-            eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
-            sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+                Sesuai namanya, Lembang Park and Zoo mengombinasikan taman wisata yang 
+                luas dengan kebun binatang. Jadi pengunjung tidak hanya bisa bertemu 
+                dengan binatang saja, tetapi beraktivitas santai dengan berbagai fasilitas 
+                yang tersedia di Lembang Park and Zoo, dari naik kano di danau buatan, naik kuda, 
+                hingga berkeliling area Lembang Park and Zoo yang luas dengan scooter.
             </p>
-            <p><strong>...</strong></p>
+            <p><strong></strong></p>
             <p class="text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
-            nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
-            alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+                Di Lembang Park and Zoo juga tersedia banyak restoran dan kafe yang istimewa, 
+                karena sambil makan kamu bisa melihat berbagai satwa di balik dinding kaca. 
+                Ada juga Neko Cat Cafe yang merupakan kafe di mana kamu juga bisa bermain dengan 
+                banyak kucing lucu. Selain itu, Lembang Park and Zoo juga punya tempat-tempat 
+                bermain untuk anak-anak, dari Playground outdoor, Kereta Mini, Storyland yang 
+                punya banyak wahana seru, hingga sekolah riding untuk anak.
             </p>
         </div>
     </div>

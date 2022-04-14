@@ -18,13 +18,13 @@
         background-position: center center;
       }
       .carousel-item:nth-child(2) {
-        background-image: url('{{ asset('img/slide/perahu3.jpg') }}');
+        background-image: url('{{ asset('img/slide/dagobakery.jpg') }}');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
       }
       .carousel-item:nth-child(3) {
-        background-image: url('{{ asset('img/lembang-zoo.jpg') }}');
+        background-image: url('{{ asset('img/slide/Cikole.jpg') }}');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -63,7 +63,9 @@
           <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
-                <h1 class="mb-3">Selamat Datang di Go Wis</h1>
+                <h1 style="color: rgb(255, 251, 0)" class="mb-3">Selamat Datang di Go Wis</h1>
+                <h5>Go wis adalah website pariwisata seputar Lembang</h5>
+                <h5>Nikmati berbagai kemudahan dalam berwisata</h5>
                 <h5 class="mb-4"></h5>
               </div>
             </div>
@@ -75,7 +77,16 @@
           <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
-                <h2>You can place here any content</h2>
+                <h1 style="color: rgb(255, 251, 0)" class="mb-3">Info Berita Seputar Destinasi Wisata Lembang</h1>
+                <h5>"Pergi wisata dengan update info 
+                  terbaru berita wisata Lembang untuk membantumu menemukan wisata yang sesuai dengan selera anda"</h5>
+                <a
+                  class="btn btn-outline-light btn-lg m-2"
+                  href="/berita"
+                  target="_blank"
+                  role="button"
+                  >Lihat Berita</a
+                >
               </div>
             </div>
           </div>
@@ -95,13 +106,16 @@
           >
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
-                <h2>And cover it with any mask</h2>
+                <h2>Paket Wisata Murah Terlengkap</h2>
+                <hr>
+                <h3 style="color: rgb(255, 251, 0)">"Manfaatkan liburan kamu untuk 
+                  melepaskan semua beban agar pikiran dan tubuh menjadi sehat kembali."</h3>
                 <a
                   class="btn btn-outline-light btn-lg m-2"
-                  href="https://www.google.com/search?q=lembang&rlz=1C1CHBD_enID970ID970&oq=lembang&aqs=chrome..69i57j46i433i512j46i175i199i512l2j46i175i199i433i512j0i512l4j46i175i199i512.1832j0j7&sourceid=chrome&ie=UTF-8"
+                  href="/paketWisata"
                   target="_blank"
                   role="button"
-                  >About Go wis</a
+                  >Lihat Paket Wisata</a
                 >
               </div>
             </div>
