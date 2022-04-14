@@ -42,6 +42,7 @@
           <div class="row" >
             @foreach ($sewas as $sewa)
             <div class="col-lg-4 col-md-12 mb-4" style="width: 20rem">
+              <hr>
               <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                   <img src="{{ $sewa->gambar }}" class="img-fluid" />
@@ -50,7 +51,7 @@
                   </a>
                 </div>
                 <div class="card-body" style="background-color: rgba(255,253,208,1)">
-                  <h5 class="card-title">{{ $sewa->nama_kendaraan }}</h5>
+                  <h5 class="card-title">{{ $sewa->nama_kendaran }}</h5>
                   <p class="card-text">
                     Harga mulai dari Rp. {{ $sewa->harga }}
                   </p>
@@ -66,9 +67,10 @@
                   <p>
                     <i class="bi bi-people-fill"></i> : {{ $sewa->penumpang }} orang
                   </p>
-                  <a href="#" class="btn btn-primary">Sewa</a>
+                  <p><a class="btn btn-primary" href="https://wa.wizard.id/b18f79"><i class="bi bi-whatsapp"></i> Contact Now!</a></p>
                 </div>
               </div>
+              <hr>
             </div>
           @endforeach
         </section>

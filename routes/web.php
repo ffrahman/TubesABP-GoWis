@@ -10,7 +10,9 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PaketWisataController;
+use App\Http\Controllers\DashboardSewaController;
 use App\Http\Controllers\DashboardBeritaController;
+use App\Http\Controllers\DashboardPaketWisataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +53,8 @@ Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/berita/{news:slug}', [BeritaController::class, 'show']);
 
 Route::resource('dashboard/berita', DashboardBeritaController::class)->middleware('auth');
+Route::resource('dashboard/sewa', DashboardSewaController::class)->middleware('auth');
+Route::resource('dashboard/paketWisata', DashboardPaketWisataController::class)->middleware('auth');
 
 
 Route::get('/categories/{category:slug}', function (Category $category) {

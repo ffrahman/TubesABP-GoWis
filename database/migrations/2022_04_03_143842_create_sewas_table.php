@@ -15,7 +15,7 @@ class CreateSewasTable extends Migration
     {
         Schema::create('sewas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_kendaran')->unique();
+            $table->string('nama_kendaraan')->unique();
             $table->string('harga');
             $table->string('gambar');
             $table->string('penumpang');

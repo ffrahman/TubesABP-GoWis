@@ -12,6 +12,14 @@
             <span data-feather="file-text"></span>
             Post Berita
           </a>
+          <a class="nav-link {{ Request::is('dashboard/paketWisata*') ? 'active' : '' }}" href="/dashboard/paketWisata">
+            <span data-feather="file-text"></span>
+            Post Paket Wisata
+          </a>
+          <a class="nav-link {{ Request::is('dashboard/sewa*') ? 'active' : '' }}" href="/dashboard/sewa">
+            <span data-feather="file-text"></span>
+            Post Sewa
+          </a>
         </li>
       </ul>
 
