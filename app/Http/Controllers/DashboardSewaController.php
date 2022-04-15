@@ -26,7 +26,7 @@ class DashboardSewaController extends Controller
      */
     public function create()
     {
-        //
+        return view('Dashboard.Sewa.create');
     }
 
     /**
@@ -37,7 +37,16 @@ class DashboardSewaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_kendaraan' => 'required|max:255',
+            'harga' => 'required',
+            'gambar' => 'required',
+            'penumpang' => 'required',
+        ]);
+
+        Sewa::create($validatedData);
+
+        return redirect('/dashboard/sewa')->with('success', 'Sewa berhasil ditambahkan');
     }
 
     /**

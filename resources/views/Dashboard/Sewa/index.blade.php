@@ -30,7 +30,7 @@
           <td>{{ $sewa->harga }}</td>
           <td>{{ $sewa->penumpang }}</td>
           <td>
-              <a href="/dashboard/sewa/{{ $sewa->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/sewaKendaraan" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="" class="badge bg-warning"><span data-feather="edit"></span></a>
               <a href="" class="badge bg-danger"><span data-feather="trash-2"></span></a>
           </td>
