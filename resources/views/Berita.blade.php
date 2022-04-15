@@ -28,7 +28,7 @@
           <p class="card-text"><small class="text-muted">Last updated   {{ $berita->updated_at->diffForHumans() }}</small></p>
         </div>
         <div class="col text-right aa">
-          <button type='button' class='btn btn-primary center-block'><a href="/berita/{{ $berita->slug }}" class="text-decoration-none text-light aa">Read more</a></button>
+          <button type='button' class='btn btn-primary center-block'><a href="/berita/{{ $berita->id }}" class="text-decoration-none text-light aa">Read more</a></button>
         </div>
       </div>
     </div>

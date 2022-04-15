@@ -26,13 +26,17 @@
         @foreach($sewas as $sewa)
         <tr>
           <td>{{ $loop->iteration }}</td>
-          <td>{{ $sewa->nama_kendaran }}</td>
-          <td>{{ $sewa->harga }}</td>
-          <td>{{ $sewa->penumpang }}</td>
+          <td>{{ $sewa->nama_kendaraan }}</td>
+          <td>Rp. {{ $sewa->harga }}</td>
+          <td>{{ $sewa->penumpang }} orang</td>
           <td>
-              <a href="/sewaKendaraan" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="" class="badge bg-warning"><span data-feather="edit"></span></a>
-              <a href="" class="badge bg-danger"><span data-feather="trash-2"></span></a>
+              <a href="/dashboard/sewa/{{ $sewa->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/dashboard/sewa/{{ $sewa->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <form action="/dashboard/sewa/{{ $sewa->id }}" method="post" class="d-inline">
+                @csrf
+                @method('delete')
+                <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Data akan dihapus!')"><span data-feather="trash-2"></span></button>
+              </form>
           </td>
         </tr>
         @endforeach

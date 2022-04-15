@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Post Sewa Kendaraan</h1>
+    <h1 class="h2">Post Paket Wisata</h1>
   </div>
   @if(session()->has('success'))
     <div class="alert alert-succces" role="alert" >
@@ -32,7 +32,7 @@
           <td>{{ $paket->durasi }} hari</td>
           <td>{{ $paket->deskripsi }}</td>
           <td>
-              <a href="" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/dashboard/paketWisata/{{ $paket->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="" class="badge bg-warning"><span data-feather="edit"></span></a>
               <a href="" class="badge bg-danger"><span data-feather="trash-2"></span></a>
           </td>

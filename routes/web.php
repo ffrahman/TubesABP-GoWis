@@ -50,16 +50,8 @@ Route::get('/sewaKendaraan', [SewaController::class, 'index']);
 Route::get('/paketWisata', [PaketWisataController::class, 'index']);
 
 Route::get('/berita', [BeritaController::class, 'index']);
-Route::get('/berita/{news:slug}', [BeritaController::class, 'show']);
+Route::get('/berita/{news:id}', [BeritaController::class, 'show']);
 
 Route::resource('dashboard/berita', DashboardBeritaController::class)->middleware('auth');
 Route::resource('dashboard/sewa', DashboardSewaController::class)->middleware('auth');
 Route::resource('dashboard/paketWisata', DashboardPaketWisataController::class)->middleware('auth');
-
-
-Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('category', [
-        'category' => $category->name,
-        'beritas' => $category->beritas,
-    ]);
-});

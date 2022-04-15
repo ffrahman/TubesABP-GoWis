@@ -16,9 +16,7 @@ class BeritaSeeder extends Seeder
     {
         Berita::create([
             'judul' => 'Wisata Tangkuban Perahu',
-            'slug' => 'wisata-tangkuban-perahu',
             'gambar' => 'https://img-z.okeinfo.net/okz/500/library/images/2020/10/28/3n0htft3jls44xlxi38c_21857.jpg',
-            'category_id' => 1,
             'excerpt' => 'Jika kamu ingin mengunjungi Tangkuban Perahu, ada kisah legenda Sangkuriang yang sangat terkenal. Kalau kamu berencana liburan ke sana,',
             'isi' => '<p>Saat mengunjungi Gunung Tangkuban Perahu, kamu akan melihat keindahan kawah-kawahnya. Ada Kawah Ratu, Kawah Upas, dan Kawah Domas yang menawan. Ketiga kawah ini jaraknya saling berjauhan, kalau kamu ingin menyusuri semuanya pastikan datanglah sejak pagi hari. Jika kamu ingin mengunjungi kawah yang lain, kamu bisa menggunakan transportasi umum yang menyediakan bus, kereta api, dan angkot. Untuk mengunjungi kawah yang lain, kamu bisa menggunakan transportasi umum yang menyediakan bus, kereta api, dan angkot. Untuk mengunjungi kawah yang lain, kamu bisa menggunakan transportasi umum yang menyediakan bus, kereta api, dan angkot.</p><p>
 
@@ -30,9 +28,7 @@ class BeritaSeeder extends Seeder
         ]);
         Berita::create([
             'judul' => 'Wisata Orchid Forest Cikole',
-            'slug' => 'wisata-orchid-forest-cikole',
             'gambar' => 'https://www.jejakpiknik.com/wp-content/uploads/2019/04/grafika-cikole-630x380.jpg',
-            'category_id' => 1,
             'excerpt' => 'Lagi mencari tempat wisata alam yang rindang, menyenangkan untuk keluarga, dan penuh area foto Instagramable di sekitar Bandung?',
             'isi' => '<p>Lagi mencari tempat wisata alam yang rindang, menyenangkan untuk keluarga, dan penuh area foto Instagramable di sekitar Bandung? Coba masukkan  ke dalam  kamu. Soalnya tempat wisata di Lembang yang satu ini memenuhi semua persyaratan di atas, lho!
             Terletak di Cikole, Lembang, Kabupaten Bandung Barat, Orchid Forest Cikole adalah sebuah tempat wisata di tengah Hutan Pinus yang asri, di mana ribuan jenis anggrek dikembangkan dan dilestarikan!.</p><p>
@@ -45,9 +41,7 @@ class BeritaSeeder extends Seeder
         ]);
         Berita::create([
             'judul' => 'Wisata The Lodge Maribaya',
-            'slug' => 'wisata-the-lodge-maribaya',
             'gambar' => 'https://asset.kompas.com/crops/hP6MoLYiG1cjqx7v8h1qKEP-DgA=/0x83:1000x750/750x500/data/photo/2021/09/26/61505e83565d7.jpg',
-            'category_id' => 1,
             'excerpt' => 'siapa sih yang ngga tahu nama tempat ini? Bagi wisatawan yang liburan ke Bandung terutama ke area Lembang,',
             'isi' => '<p>The Lodge Maribaya, siapa sih yang ngga tahu nama tempat ini? Bagi wisatawan yang liburan ke Bandung terutama ke area Lembang, tempat ini seolah menjadi salah satu destinasi yang wajib dikunjungi.
 
@@ -63,9 +57,7 @@ class BeritaSeeder extends Seeder
         ]);
         Berita::create([
             'judul' => 'Wisata Lembang Wonderland',
-            'slug' => 'wisata-lembang-wonderland',
             'gambar' => 'https://foto.kontan.co.id/k0jQi5tIBQUaa89CxUcx1zHgvmY=/smart/2020/11/06/526333001p.jpg',
-            'category_id' => 1,
             'excerpt' => 'Lembang Wonderland di Bandung Jawa Barat menyuguhkan sensasi wisata istimewa dengan nuansa bak di negeri dongeng.',
             'isi' => '<p>Lembang Wonderland di Bandung Jawa Barat menyuguhkan sensasi wisata istimewa dengan nuansa bak di negeri dongeng. Seluruh bangunan dan tiap sudut yang ada di tempat wisata di Bandung ini sengaja di desain se menarik mungkin.</p><p>
 
@@ -75,9 +67,7 @@ class BeritaSeeder extends Seeder
         ]);
         Berita::create([
             'judul' => 'Wisata Lembang Park and Zoo',
-            'slug' => 'wisata-lembang-park-and-zoo',
             'gambar' => 'https://anekatempatwisata.com/wp-content/uploads/2020/12/Lembang-Park-and-Zoo-travelspromo.jpg',
-            'category_id' => 1,
             'excerpt' => 'Tempat wisata yang dibuka pada tahun 2019 ini, menawarkan',
             'isi' => '<p>Tempat wisata yang dibuka pada tahun 2019 ini, menawarkan “rasa” yang berbeda pagi pengunjung kota Lembang Bandung. Di sana kamu dapat menemui satwa-satwa yang cukup dilindungi. Walau memang, kebun binatang ini tidak dibuat dalam skala besar, kawasan ini dibuat dengan mengangkat tema kebun binatang moderen berstandar internasional.</p><p>
 
@@ -87,9 +77,7 @@ class BeritaSeeder extends Seeder
         ]);
         Berita::create([
             'judul' => 'Wisata Grafika Cikole Lembang',
-            'slug' => 'wisata-grafika-cikole-lembang',
             'gambar' => 'https://i0.wp.com/hargaticket.com/wp-content/uploads/2019/12/gra8.jpg?resize=595%2C728&ssl=1',
-            'category_id' => 1,
             'excerpt' => 'Wisata terbaru yang ada di Lembang selanjutnya adalah Grafika Cikole Lembang. Destinasi wisata yang satu ini sangat menarik',
             'isi' => '<p>Wisata terbaru yang ada di Lembang selanjutnya adalah Grafika Cikole Lembang. Destinasi wisata yang satu ini sangat menarik untuk dikunjungi apalagi bersama keluarga. Di tempat wisata ini Anda dapat menikmati fasilitas permainan yang menyenangkan seperti kegiatan outbond.</p><p>
 

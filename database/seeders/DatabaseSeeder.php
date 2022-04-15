@@ -27,21 +27,5 @@ class DatabaseSeeder extends Seeder
             'email' => 'wahid@gmail.com',
             'password' => bcrypt('111111'),
         ]);
-
-        Category::create([
-
-            'name' => 'Wisata',
-            'slug' => 'wisata',
-
-        ]);
-        Category::create([
-            'name' => 'Paket Wisata',
-            'slug' => 'paket-wisata',
-
-        ]);
-        Category::create([
-            'name' => 'Berita',
-            'slug' => 'berita',
-        ]);
     }
 }

@@ -17,7 +17,7 @@ class CreateSewasTable extends Migration
             $table->id();
             $table->string('nama_kendaraan')->unique();
             $table->string('harga');
-            $table->string('gambar');
+            $table->string('image');
             $table->string('penumpang');
             $table->timestamps();
         });

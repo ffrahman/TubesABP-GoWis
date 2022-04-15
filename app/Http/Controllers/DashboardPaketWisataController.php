@@ -48,7 +48,7 @@ class DashboardPaketWisataController extends Controller
      */
     public function show(PaketWisata $paketWisata)
     {
-        //
+        return $paketWisata;
     }
 
     /**

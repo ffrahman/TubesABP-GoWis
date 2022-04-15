@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sewa;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DashboardSewaController extends Controller
 {
@@ -38,15 +39,18 @@ class DashboardSewaController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nama_kendaraan' => 'required|max:255',
+            'nama_kendaraan' => 'required|unique:sewas|max:255',
             'harga' => 'required',
-            'gambar' => 'required',
             'penumpang' => 'required',
+            'image' => 'required|image',
         ]);
 
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('sewa-images');
+        }
         Sewa::create($validatedData);
 
-        return redirect('/dashboard/sewa')->with('success', 'Sewa berhasil ditambahkan');
+        return redirect('/dashboard/sewa')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -57,7 +61,9 @@ class DashboardSewaController extends Controller
      */
     public function show(Sewa $sewa)
     {
-        return $sewa;
+        return view('Dashboard.Sewa.show', [
+            'sewa' => $sewa
+        ]);
     }
 
     /**
@@ -68,7 +74,9 @@ class DashboardSewaController extends Controller
      */
     public function edit(Sewa $sewa)
     {
-        //
+        return view('Dashboard.Sewa.edit', [
+            'sewa' => $sewa
+        ]);
     }
 
     /**
@@ -80,7 +88,16 @@ class DashboardSewaController extends Controller
      */
     public function update(Request $request, Sewa $sewa)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_kendaraan' => 'required|unique:sewas|max:255',
+            'harga' => 'required',
+            'penumpang' => 'required',
+            'gambar' => 'required',
+        ]);
+
+        $sewa->update($validatedData);
+
+        return redirect('/dashboard/sewa')->with('success', 'Data berhasil diubah');
     }
 
     /**
@@ -91,6 +108,7 @@ class DashboardSewaController extends Controller
      */
     public function destroy(Sewa $sewa)
     {
-        //
+        Sewa::destroy($sewa->id);
+        return redirect('/dashboard/sewa')->with('success', 'Data berhasil dihapus');
     }
 }
