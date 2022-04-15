@@ -15,46 +15,46 @@ class PaketWisataSeeder extends Seeder
     public function run()
     {
         PaketWisata::create([
-            'nama_paket' => 'Paket Wisata 1',
-            'gambar' => 'https://lzd-img-global.slatic.net/g/p/a5465ef16f452de5a3ccdd098cf05ca5.jpg_720x720q80.jpg_.webp',
-            'harga' => '70.000',
+            'nama_paket' => 'Paket Wisata Cikole',
+            'gambar' => 'https://phinemo.com/wp-content/uploads/2019/10/grafika-cikole-1-1024x678.jpg',
+            'harga' => '700.000',
             'durasi' => '4',
             'deskripsi' => 'Villa (4 tempat tidur), makan pagi, akses masuk wisata',
         ]);
         PaketWisata::create([
-            'nama_paket' => 'Paket Wisata 2',
-            'gambar' => 'https://lzd-img-global.slatic.net/g/p/a5465ef16f452de5a3ccdd098cf05ca5.jpg_720x720q80.jpg_.webp',
-            'harga' => '100.000',
-            'durasi' => '7',
-            'deskripsi' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci',
-        ]);
-        PaketWisata::create([
-            'nama_paket' => 'Paket Wisata 3',
-            'gambar' => 'https://lzd-img-global.slatic.net/g/p/a5465ef16f452de5a3ccdd098cf05ca5.jpg_720x720q80.jpg_.webp',
-            'harga' => '200.000',
-            'durasi' => '1',
-            'deskripsi' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci',
-        ]);
-        PaketWisata::create([
-            'nama_paket' => 'Paket Wisata 4',
-            'gambar' => 'https://lzd-img-global.slatic.net/g/p/a5465ef16f452de5a3ccdd098cf05ca5.jpg_720x720q80.jpg_.webp',
-            'harga' => '1.000',
-            'durasi' => '3',
-            'deskripsi' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci',
-        ]);
-        PaketWisata::create([
-            'nama_paket' => 'Paket Wisata 5',
-            'gambar' => 'https://lzd-img-global.slatic.net/g/p/a5465ef16f452de5a3ccdd098cf05ca5.jpg_720x720q80.jpg_.webp',
-            'harga' => '10.000',
-            'durasi' => '7',
-            'deskripsi' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci',
-        ]);
-        PaketWisata::create([
-            'nama_paket' => 'Paket Wisata 6',
-            'gambar' => 'https://lzd-img-global.slatic.net/g/p/a5465ef16f452de5a3ccdd098cf05ca5.jpg_720x720q80.jpg_.webp',
-            'harga' => '50.000',
+            'nama_paket' => 'Paket Wisata Ciwidey',
+            'gambar' => 'https://www.tagar.id/Asset/uploads2019/1609746660436-wisata-kawah-putih.jpeg',
+            'harga' => '500.000',
             'durasi' => '2',
-            'deskripsi' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci',
+            'deskripsi' => 'Villa (4 tempat tidur), makan pagi, akses masuk wisata',
+        ]);
+        PaketWisata::create([
+            'nama_paket' => 'Paket Wisata Lodge Maribaya',
+            'gambar' => 'http://assets.rappler.com/612F469A6EA84F6BAE882D2B94A4B421/img/A84A9BE00FE94182900B95074899BE19/thelodge2.jpg',
+            'harga' => '1.000.000',
+            'durasi' => '2',
+            'deskripsi' => 'Villa (3 kamar tidur), makan pagi dan malam.',
+        ]);
+        PaketWisata::create([
+            'nama_paket' => 'Paket Wisata Lembang Park Zoo',
+            'gambar' => 'https://kelanamakan.com/wp-content/uploads/2020/10/1-LembangParkZoo_01.jpg',
+            'harga' => '400.000',
+            'durasi' => '3',
+            'deskripsi' => 'Villa (2 tempat tidur), akses masuk wisata',
+        ]);
+        PaketWisata::create([
+            'nama_paket' => 'Paket Wisata Asia Africa',
+            'gambar' => 'https://travelspromo.com/wp-content/uploads/2020/01/The-Great-Asia-Africa-Lembang.jpg',
+            'harga' => '800.000',
+            'durasi' => '7',
+            'deskripsi' => 'Villa (4 tempat tidur), Makan pagi, Akses masuk wisata',
+        ]);
+        PaketWisata::create([
+            'nama_paket' => 'Paket Wisata De Ranch',
+            'gambar' => 'https://origin.pegipegi.com/jalan/images/pict1L/Y8/Y991608/Y991608182.jpg',
+            'harga' => '900.000',
+            'durasi' => '2',
+            'deskripsi' => 'Hottel (2 tempat tidur), Makan pagi dan malam',
         ]);
     }
 }
