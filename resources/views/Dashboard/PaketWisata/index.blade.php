@@ -10,7 +10,7 @@
     </div>
   @endif
 
-  <div class="table-responsive col-lg-8">
+  <div class="table-responsive col-lg-8 d-inline">
     <a href="" class="btn btn-primary mb-3">Tambah paket</a>
     <table class="table table-striped table-sm">
       <thead>

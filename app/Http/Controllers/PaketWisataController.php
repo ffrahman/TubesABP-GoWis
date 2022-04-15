@@ -16,6 +16,6 @@ class PaketWisataController extends Controller
     public function index()
     {
         $paketwisatas = PaketWisata::all();
-        return view('paketwisata', compact('paketwisatas'));
+        return view('PaketWisata', compact('paketwisatas'));
     }
 }

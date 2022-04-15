@@ -45,9 +45,12 @@ class DashboardSewaController extends Controller
             'image' => 'required|image',
         ]);
 
-        if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('sewa-images');
-        }
+        $validatedData['image'] = $request->file('image')->store('foto-sewa');
+
+        // if ($request->file('image')) {
+        //     $validatedData['image'] = $request->file('image')->store('sewa-images');
+        // }
+
         Sewa::create($validatedData);
 
         return redirect('/dashboard/sewa')->with('success', 'Data berhasil ditambahkan');

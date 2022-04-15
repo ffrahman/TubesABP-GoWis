@@ -16,6 +16,6 @@ class SewaController extends Controller
     public function index()
     {
         $sewas = Sewa::all();
-        return view('sewaKendaraan', compact('sewas'));
+        return view('SewaKendaraan', compact('sewas'));
     }
 }

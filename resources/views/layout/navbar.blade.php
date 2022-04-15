@@ -38,7 +38,7 @@
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
         <!-- Left links -->
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link {{ Request::is('paketWisata') ? 'active' : '' }}" href="/paketWisata">Paket Wisata</a>
           </li>
@@ -50,7 +50,7 @@
           </li>
         </ul>
         <!-- Left links -->
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        {{-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,7 +74,7 @@
               </button>
             </div>
           @endauth
-        </ul>
+        </ul> --}}
       </div>
       <!-- Collapsible wrapper -->
     </div>

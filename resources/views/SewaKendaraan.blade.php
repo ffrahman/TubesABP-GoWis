@@ -45,7 +45,7 @@
               <hr>
               <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img src="{{ $sewa->image }}" class="img-fluid" />
+                  <img src="{{ asset('storage/' . $sewa->image) }}" class="img-fluid" />
                   <a href="#">
                     <div class="mask" style="background-color: rgba(255, 255, 0, 0.15);"></div>
                   </a>
