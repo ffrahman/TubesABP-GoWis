@@ -42,7 +42,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('Dashboard.index');
-});
+})->middleware('auth');
 
 
 Route::get('/sewaKendaraan', [SewaController::class, 'index']);
@@ -53,5 +53,7 @@ Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/berita/{news:id}', [BeritaController::class, 'show']);
 
 Route::resource('dashboard/berita', DashboardBeritaController::class)->middleware('auth');
+
 Route::resource('dashboard/sewa', DashboardSewaController::class)->middleware('auth');
+
 Route::resource('dashboard/paketWisata', DashboardPaketWisataController::class)->middleware('auth');

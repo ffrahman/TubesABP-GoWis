@@ -15,7 +15,7 @@ class SewaController extends Controller
      */
     public function index()
     {
-        $sewas = Sewa::all();
+        $sewas = Sewa::latest()->get();
         return view('SewaKendaraan', compact('sewas'));
     }
 }

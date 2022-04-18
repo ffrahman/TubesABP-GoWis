@@ -18,8 +18,6 @@
           <th scope="col">No</th>
           <th scope="col">Nama Paket</th>
           <th scope="col">harga</th>
-          <th scope="col">Durasi</th>
-          <th scope="col">Deskripsi</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -29,12 +27,14 @@
           <td>{{ $loop->iteration }}</td>
           <td>{{ $paket->nama_paket }}</td>
           <td>{{ $paket->harga }}</td>
-          <td>{{ $paket->durasi }} hari</td>
-          <td>{{ $paket->deskripsi }}</td>
           <td>
               <a href="/dashboard/paketWisata/{{ $paket->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="" class="badge bg-warning"><span data-feather="edit"></span></a>
-              <a href="" class="badge bg-danger"><span data-feather="trash-2"></span></a>
+              <form action="/dashboard/paketWisata/{{ $paket->id }}" method="post" class="d-inline">
+                @csrf
+                @method('delete')
+                <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Data akan dihapus!')"><span data-feather="trash-2"></span></button>
+              </form>
           </td>
         </tr>
         @endforeach

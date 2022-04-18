@@ -64,6 +64,7 @@ class DashboardSewaController extends Controller
      */
     public function show(Sewa $sewa)
     {
+        return $sewa;
         return view('Dashboard.Sewa.show', [
             'sewa' => $sewa
         ]);
@@ -95,7 +96,7 @@ class DashboardSewaController extends Controller
             'nama_kendaraan' => 'required|unique:sewas|max:255',
             'harga' => 'required',
             'penumpang' => 'required',
-            'gambar' => 'required',
+            'image' => 'required',
         ]);
 
         $sewa->update($validatedData);
