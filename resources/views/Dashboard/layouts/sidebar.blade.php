@@ -12,7 +12,7 @@
             <span data-feather="file-text"></span>
             Post Berita
           </a>
-          <a class="nav-link {{ Request::is('dashboard/paketWisata*') ? 'active' : '' }}" href="/dashboard/paketWisata">
+          <a class="nav-link {{ Request::is('dashboard/paket*') ? 'active' : '' }}" href="/dashboard/paket">
             <span data-feather="file-text"></span>
             Post Paket Wisata
           </a>

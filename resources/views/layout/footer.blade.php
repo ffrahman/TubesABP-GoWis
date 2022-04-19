@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<hr class="m-5" />
+<hr>
 <footer class="container">
   <strong>Copyright © {{ date('Y') }} Go Wis. 
     </strong>

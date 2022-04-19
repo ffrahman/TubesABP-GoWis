@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
-use Illuminate\Http\Request;
+
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreBeritaRequest;
-use App\Http\Requests\UpdateBeritaRequest;
+
 
 class BeritaController extends Controller
 {

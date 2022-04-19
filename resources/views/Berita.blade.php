@@ -19,7 +19,7 @@
       
     <div class="row g-3">
       <div class="col-md-4">
-        <img src="{{ $berita->gambar }}" class="img-fluid rounded-start" alt="...">
+        <img src="{{ $berita->image }}" class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">

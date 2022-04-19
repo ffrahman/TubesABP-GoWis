@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\Berita;
-use App\Models\Category;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SewaController;
@@ -11,8 +9,8 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PaketWisataController;
 use App\Http\Controllers\DashboardSewaController;
+use App\Http\Controllers\DashboardPaketController;
 use App\Http\Controllers\DashboardBeritaController;
-use App\Http\Controllers\DashboardPaketWisataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,4 +54,4 @@ Route::resource('dashboard/berita', DashboardBeritaController::class)->middlewar
 
 Route::resource('dashboard/sewa', DashboardSewaController::class)->middleware('auth');
 
-Route::resource('dashboard/paketWisata', DashboardPaketWisataController::class)->middleware('auth');
+Route::resource('dashboard/paket', DashboardPaketController::class)->middleware('auth');

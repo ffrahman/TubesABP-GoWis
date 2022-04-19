@@ -28,6 +28,7 @@
     <Style>
       .apa{
         background-color:rgba(241, 241, 13, 0.819);
+        background-position: absolute;
       }
     </Style>
 </head>

@@ -36,7 +36,7 @@
   </div>
   <div class="container d-flex flex-wrap justify-content-center m-auto">
       <section class="text-center">
-        <hr>
+        <br>
           <h4 class="mb-5"><strong>Sewa Mobil & Motor</strong></h4>
   
           <div class="row" >
@@ -51,7 +51,7 @@
                   </a>
                 </div>
                 <div class="card-body" style="background-color: rgba(255,253,208,1)">
-                  <h5 class="card-title">{{ $sewa->nama_kendaran }}</h5>
+                  <h5 class="card-title">{{ $sewa->nama_kendaraan }}</h5>
                   <p class="card-text">
                     Harga mulai dari Rp. {{ $sewa->harga }}
                   </p>

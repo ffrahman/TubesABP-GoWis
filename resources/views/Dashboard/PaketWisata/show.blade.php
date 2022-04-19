@@ -1,23 +1,49 @@
 @extends('Dashboard.layouts.main')
 
 @section('content')
-<div class="container d-flex flex-wrap justify-content-center m-auto text-center">
-    <!-- Three columns of text below the carousel -->
-    <div class="col-md-4 col-sm-6 mb-3 m-3" style="width: 20rem; position: relative;">
-      <hr>
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ $paket->gambar }}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title></title>
-          <rect width="100%" height="100%" fill="#77 7" /><text x="50%" y="50%" fill="#777" dy=".3em"></text>
-        </img>
-      
-        <h2>{{ $paket->nama_paket }}</h2>
-        <p>Harga paket Rp. {{ $paket->harga }} </p>
-        <p>paket {{ $paket->durasi }} hari:</p>
-        <p>{{ $paket->deskripsi }}</p>
-        <p><a class="btn btn-secondary" href="https://wa.wizard.id/b18f79"><i class="bi bi-whatsapp"></i> Contact Now!</a></p>
-        <hr>
-        <a href="/dashboard/paketWisata" class="btn btn-success"><span data-feather="arrow-left"></span>Back</a>
-      </div>
-    </div>
-  </div>
+<div class="container d-flex flex-wrap justify-content-center m-auto">
+  <section class="text-center">
+    <br>
+      <h4 class="mb-5"><strong>Paket Wisata</strong></h4>
+
+      <div class="row" >
+        <div class="col-lg-4 col-md-12 mb-4" style="width: 30rem">
+          <hr>
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+
+              
+              <img src="{{ asset('storage/' . $paket->image) }}" class="img-fluid" />
+              
+
+
+              <a href="#">
+                <div class="mask" style="background-color: rgba(255, 255, 0, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body" style="background-color: rgba(255,253,208,1)">
+              <h5 class="card-title">{{ $paket->nama }}</h5>
+              <p class="card-text">
+                Harga Paket Rp. {{ $paket->harga }}
+              </p>
+              <p>paket {{ $paket->durasi }} hari:</p>
+              <p>{{ $paket->deskripsi }}</p>
+  
+              <p><a class="btn btn-primary" href="https://wa.wizard.id/b18f79"><i class="bi bi-whatsapp"></i> Contact Now!</a></p>
+            </div>
+          </div>
+          <hr>
+          <a href="/dashboard/paket" class="btn btn-success"><span data-feather="arrow-left"></span>Back</a>
+
+          <a href="/dashboard/paket/{{ $paket->id }}/edit" class="btn btn-warning"><span data-feather="edit"></span>Edit</a>
+
+          <form action="/dashboard/paket/{{ $paket->id }}" method="post" class="d-inline">
+            @csrf
+            @method('delete')
+            <button type="submit" class="btn btn-danger border-0" onclick="return confirm('Data akan dihapus!')"><span data-feather="trash-2"></span>Delete</button>
+          </form>
+
+        </div>
+    </section>
+</div>
 @endsection

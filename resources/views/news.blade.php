@@ -4,8 +4,8 @@
 @section('content')
     <div class="container">
         <article>
-            <h2>{{ $berita->judul }}</h2>
-            <img src="{{ $berita->gambar }}" alt="">
+            <h2>{{ $berita->nama }}</h2>
+            <img src="{{ $berita->image }}" alt="image berita" class="mb-3 mt-3">
             
                 {!! $berita->isi !!}
             

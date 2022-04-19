@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Berita;
-use Illuminate\Support\Str;
-use function Ramsey\Uuid\v1;
-
+use App\Models\Paket;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class DashboardBeritaController extends Controller
+class DashboardPaketController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +14,8 @@ class DashboardBeritaController extends Controller
      */
     public function index()
     {
-        return view('Dashboard.Berita.index', [
-            'beritas' => Berita::all()
+        return view('Dashboard.PaketWisata.index', [
+            'pakets' => Paket::all()
         ]);
     }
 
@@ -47,20 +43,23 @@ class DashboardBeritaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Berita  $berita
+     * @param  \App\Models\Paket  $paket
      * @return \Illuminate\Http\Response
      */
-    public function show(Berita $berita)
+    public function show(Paket $paket)
     {
-        return $berita;
+        return view('Dashboard.PaketWisata.show', [
+            'paket' => $paket
+        ]);
     }
+
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Berita  $berita
+     * @param  \App\Models\Paket  $paket
      * @return \Illuminate\Http\Response
      */
-    public function edit(Berita $berita)
+    public function edit(Paket $paket)
     {
         //
     }
@@ -69,10 +68,10 @@ class DashboardBeritaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Berita  $berita
+     * @param  \App\Models\Paket  $paket
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Berita $berita)
+    public function update(Request $request, Paket $paket)
     {
         //
     }
@@ -80,10 +79,10 @@ class DashboardBeritaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Berita  $berita
+     * @param  \App\Models\Paket  $paket
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Berita $berita)
+    public function destroy(Paket $paket)
     {
         //
     }

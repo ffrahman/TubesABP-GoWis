@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Sewa;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardSewaController extends Controller
 {
@@ -39,7 +40,7 @@ class DashboardSewaController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nama_kendaraan' => 'required|unique:sewas|max:255',
+            'nama_kendaraan' => 'required|max:255',
             'harga' => 'required',
             'penumpang' => 'required',
             'image' => 'required|image',
@@ -64,7 +65,6 @@ class DashboardSewaController extends Controller
      */
     public function show(Sewa $sewa)
     {
-        return $sewa;
         return view('Dashboard.Sewa.show', [
             'sewa' => $sewa
         ]);
@@ -93,13 +93,21 @@ class DashboardSewaController extends Controller
     public function update(Request $request, Sewa $sewa)
     {
         $validatedData = $request->validate([
-            'nama_kendaraan' => 'required|unique:sewas|max:255',
+            'nama_kendaraan' => 'required|max:255',
             'harga' => 'required',
             'penumpang' => 'required',
-            'image' => 'required',
+            'image' => 'image',
         ]);
 
         $sewa->update($validatedData);
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $sewa->image = $request->file('image')->store('foto-sewa');
+            $sewa->save();
+        }
+
 
         return redirect('/dashboard/sewa')->with('success', 'Data berhasil diubah');
     }
