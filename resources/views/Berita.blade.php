@@ -14,21 +14,21 @@
 <br>
   <h4 class="mb-5 my-y text-center"><strong>Latest posts</strong></h4>
   <div class="container mb-3" style="max-width: 1000px;">
-    @foreach ($beritas as $berita)
+    @foreach ($news as $news)
     <hr>
-      
+
     <div class="row g-3">
       <div class="col-md-4">
-        <img src="{{ $berita->image }}" class="img-fluid rounded-start" alt="...">
+        <img src="{{ asset('storage/' . $news->image) }}" class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ $berita->judul }}</h5>
-          <p class="card-text">{{ $berita->excerpt }}</p>
-          <p class="card-text"><small class="text-muted">Last updated   {{ $berita->updated_at->diffForHumans() }}</small></p>
+          <h5 class="card-title">{{ $news->judul }}</h5>
+          <p class="card-text">{{ $news->excerpt }}</p>
+          <p class="card-text"><small class="text-muted">Last updated   {{ $news->updated_at->diffForHumans() }}</small></p>
         </div>
         <div class="col text-right aa">
-          <button type='button' class='btn btn-primary center-block'><a href="/berita/{{ $berita->id }}" class="text-decoration-none text-light aa">Read more</a></button>
+          <button type='button' class='btn btn-primary center-block'><a href="/news/{{ $news->id }}" class="text-decoration-none text-light aa">Read more</a></button>
         </div>
       </div>
     </div>
@@ -36,4 +36,3 @@
     @endforeach
   </div>
   @endsection
-  

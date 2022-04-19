@@ -7,13 +7,14 @@
 @section('content')
 
   @include('layout.slide-rekomendasi')
-  
+
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 {{-- <hr class="my-5" /> --}}
 
 <div class="text-bold text-center mb-5">
+    <br>
   <h2>Detail Wisata</h2>
 </div>
 
@@ -26,7 +27,7 @@
         <title></title>
         <rect width="100%" height="100%" fill="#77 7" /><text x="50%" y="50%" fill="#777" dy=".3em"></text>
       </img>
-    
+
       <h2>{{ $paket->nama }}</h2>
       <p>Harga paket Rp. {{ $paket->harga }} </p>
       <p>paket {{ $paket->durasi }} hari:</p>

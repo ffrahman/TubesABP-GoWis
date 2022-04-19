@@ -2,15 +2,16 @@
 
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SewaController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PaketWisataController;
 use App\Http\Controllers\DashboardSewaController;
 use App\Http\Controllers\DashboardPaketController;
-use App\Http\Controllers\DashboardBeritaController;
+use App\Http\Controllers\DashboardNewsController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,20 +39,18 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 
-Route::get('/dashboard', function () {
-    return view('Dashboard.index');
-})->middleware('auth');
 
 
 Route::get('/sewaKendaraan', [SewaController::class, 'index']);
 
 Route::get('/paketWisata', [PaketWisataController::class, 'index']);
 
-Route::get('/berita', [BeritaController::class, 'index']);
-Route::get('/berita/{news:id}', [BeritaController::class, 'show']);
+Route::get('/news', [NewsController::class, 'index']);
+Route::get('/news/{news:id}', [NewsController::class, 'show']);
 
-Route::resource('dashboard/berita', DashboardBeritaController::class)->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::resource('dashboard/sewa', DashboardSewaController::class)->middleware('auth');
-
 Route::resource('dashboard/paket', DashboardPaketController::class)->middleware('auth');
+
+Route::resource('dashboard/news', DashboardNewsController::class)->middleware('auth');

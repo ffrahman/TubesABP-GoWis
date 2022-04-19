@@ -21,7 +21,7 @@
         />
         <span class="gowis mx-3">Go Wis</span>
       </a>
-  
+
       <!-- Toggle button -->
       <button
         class="navbar-toggler"
@@ -34,7 +34,7 @@
       >
         <i class="fas fa-bars"></i>
       </button>
-  
+
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
         <!-- Left links -->
@@ -46,7 +46,7 @@
             <a class="nav-link {{ Request::is('sewaKendaraan') ? 'active' : '' }}" href="/sewaKendaraan">Sewa Kendaraan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('berita') ? 'active' : '' }}" href="/berita">Berita</a>
+            <a class="nav-link {{ Request::is('news') ? 'active' : '' }}" href="/news">Berita</a>
           </li>
         </ul>
         <!-- Left links -->
