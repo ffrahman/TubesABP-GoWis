@@ -41,9 +41,9 @@ class DashboardNewsController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required|max:255',
+            'title' => 'required',
             'content' => 'required',
-            'image' => 'required|image',
+            'image' => 'image',
         ]);
 
         $validatedData['image'] = $request->file('image')->store('foto-news');
@@ -91,19 +91,19 @@ class DashboardNewsController extends Controller
     public function update(Request $request, News $news)
     {
         $validatedData = $request->validate([
-            'title' => 'required|max:255',
+            'title' => 'required',
             'content' => 'required',
-            'image' => 'required|image',
+            'image' => 'image',
         ]);
 
-        $news->update($validatedData);
-        $validatedData['excerpt'] = Str::limit(strip_tags($request->content), 100);
 
+        $news->update($validatedData);
         if ($request->file('image')) {
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
             $news->image = $request->file('image')->store('foto-news');
+            $validatedData['excerpt'] = Str::limit(strip_tags($request->content), 100);
             $news->save();
         }
 

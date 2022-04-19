@@ -23,7 +23,7 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ $news->judul }}</h5>
+          <h5 class="card-title">{{ $news->title }}</h5>
           <p class="card-text">{{ $news->excerpt }}</p>
           <p class="card-text"><small class="text-muted">Last updated   {{ $news->updated_at->diffForHumans() }}</small></p>
         </div>
