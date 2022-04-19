@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Paket;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardPaketController extends Controller
 {
@@ -26,7 +28,7 @@ class DashboardPaketController extends Controller
      */
     public function create()
     {
-        //
+        return view('Dashboard.PaketWisata.create');
     }
 
     /**
@@ -37,7 +39,19 @@ class DashboardPaketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama' => 'required|max:255',
+            'harga' => 'required',
+            'durasi' => 'required',
+            'image' => 'required|image',
+            'deskripsi' => 'required',
+        ]);
+
+        $validatedData['image'] = $request->file('image')->store('foto-paket');
+
+        Paket::create($validatedData);
+
+        return redirect('/dashboard/paket')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -61,7 +75,9 @@ class DashboardPaketController extends Controller
      */
     public function edit(Paket $paket)
     {
-        //
+        return view('Dashboard.PaketWisata.edit', [
+            'paket' => $paket
+        ]);
     }
 
     /**
@@ -73,7 +89,24 @@ class DashboardPaketController extends Controller
      */
     public function update(Request $request, Paket $paket)
     {
-        //
+        $validatedData = $request->validate([
+            'nama' => 'required|max:255',
+            'harga' => 'required',
+            'durasi' => 'required',
+            'image' => 'image',
+            'deskripsi' => 'required',
+        ]);
+
+        $paket->update($validatedData);
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $paket->image = $request->file('image')->store('foto-paket');
+            $paket->save();
+        }
+
+        return redirect('/dashboard/paket')->with('success', 'Data berhasil diubah');
     }
 
     /**
@@ -84,6 +117,7 @@ class DashboardPaketController extends Controller
      */
     public function destroy(Paket $paket)
     {
-        //
+        Paket::destroy($paket->id);
+        return redirect('/dashboard/paket')->with('success', 'Data berhasil dihapus');
     }
 }

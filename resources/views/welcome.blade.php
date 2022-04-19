@@ -54,7 +54,7 @@
             <div class="col-lg-4 col-md-12 mb-4" style="width:26rem">
             <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="{{ $berita->gambar }}" class="img-fluid" />
+                <img src="{{ $berita->image }}" class="img-fluid" />
                 <a href="#">
                     <div class="mask" style="background-color: rgba(255, 255, 0, 0.15);"></div>
                 </a>

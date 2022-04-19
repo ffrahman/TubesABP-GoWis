@@ -22,7 +22,7 @@
   <!-- Three columns of text below the carousel -->
   <div class="col-md-4 col-sm-6 mb-3 m-3" style="width: 20rem; position: relative;">
     <hr>
-      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ $paket->image }}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ asset('storage/' . $paket->image) }}" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
         <title></title>
         <rect width="100%" height="100%" fill="#77 7" /><text x="50%" y="50%" fill="#777" dy=".3em"></text>
       </img>

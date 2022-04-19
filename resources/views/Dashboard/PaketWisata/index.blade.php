@@ -11,7 +11,7 @@
   @endif
 
   <div class="table-responsive col-lg-8 d-inline">
-    <a href="" class="btn btn-primary mb-3">Tambah paket</a>
+    <a href="/dashboard/paket/create" class="btn btn-primary mb-3">Tambah paket</a>
     <table class="table table-striped table-sm">
       <thead>
         <tr>
@@ -29,7 +29,7 @@
           <td>Rp. {{ $paket->harga }}</td>
           <td>
               <a href="/dashboard/paket/{{ $paket->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="/dashboard/paket/{{ $paket->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
               <form action="/dashboard/paket/{{ $paket->id }}" method="post" class="d-inline">
                 @csrf
                 @method('delete')
