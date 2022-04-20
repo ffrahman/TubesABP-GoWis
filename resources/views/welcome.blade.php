@@ -1,5 +1,18 @@
 @extends('layout.main')
 
+<style>
+
+    .card {
+        height : 440px;
+        border : none;
+    }
+
+    .card-body{
+        font-weight: 600;
+        font-size: 12px;
+    }
+</style>
+
 @section('title')
   Welcome
 @endsection
@@ -51,25 +64,23 @@
 
         <div class="row" >
             @foreach ($news as $news)
-            <div class="col-lg-4 col-md-12 mb-4" style="width:26rem">
-            <div class="card">
+            <div class="col-lg-4 col-md-12 mb-4" style="width:23rem">
+            <div class="card" style="width: 19rem; height: 26rem">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="{{ asset('storage/' . $news->image) }}" class="img-fluid" />
-                <a href="#">
-                    <div class="mask" style="background-color: rgba(255, 255, 0, 0.15);"></div>
-                </a>
+                    <img width="auto" height="auto" src="{{ asset('storage/' .$news->image)}}" class="img-fluid" alt="image berita">
+
                 </div>
                 <div class="card-body" style="background-color: rgba(255,253,208,1)">
-                <h5 class="card-title">{{ $news->judul }}</h5>
-                <p class="card-text">
-                    {{ $news->excerpt }}
-                </p>
-                <a href="/news/{{ $news->id }}" class="btn btn-primary">Read more</a>
+                    <h5 class="card-title">{{ $news->title }}</h5>
+                    <p class="card-text ">
+                        {{ $news->excerpt }}
+                    </p>
+                    <a href="/news/{{ $news->id }}" class="btn btn-primary">Read more</a>
                 </div>
             </div>
-            <hr>
-            </div>
+            <br>
+        </div>
         @endforeach
-        </section>
+    </section>
 </div>
 @endsection
