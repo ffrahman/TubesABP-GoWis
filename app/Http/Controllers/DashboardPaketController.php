@@ -43,7 +43,7 @@ class DashboardPaketController extends Controller
             'nama' => 'required|max:255',
             'harga' => 'required',
             'durasi' => 'required',
-            'image' => 'required|image',
+            'image' => 'image',
             'deskripsi' => 'required',
         ]);
 

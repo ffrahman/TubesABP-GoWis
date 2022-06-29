@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Sewa;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class SewaApiController extends Controller
 {
@@ -15,7 +17,12 @@ class SewaApiController extends Controller
     public function index()
     {
         $sewas = Sewa::all();
-        return response()->json(['data' => $sewas]);
+        return response()->json([
+            "success" => true,
+            "data" => $sewas,
+            "message" => "list sewa",
+            "data" => $sewas
+        ]);
     }
 
     /**
@@ -26,7 +33,20 @@ class SewaApiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_kendaraan' => 'required|max:255',
+            'harga' => 'required',
+            'penumpang' => 'required',
+            'image' => 'image',
+        ]);
+
+        $validatedData['image'] = $request->file('image')->store('foto-sewa');
+        $sewas = Sewa::create($validatedData);
+        return response()->json([
+            "success" => true,
+            "message" => "berhasil dibuat",
+            "data" => $sewas
+        ]);
     }
 
     /**
@@ -37,8 +57,17 @@ class SewaApiController extends Controller
      */
     public function show($id)
     {
-        $sewa = Sewa::find($id);
-        return response()->json(['data' => $sewa]);
+        $sewas = Sewa::find($id);
+        if (is_null($sewas)) {
+            return response()->json([
+                "data" => null
+            ]);
+        }
+        return response()->json([
+            "success" => true,
+            "message" => "Berhasil tampil",
+            'data' => $sewas
+        ]);
     }
 
     /**
@@ -50,7 +79,26 @@ class SewaApiController extends Controller
      */
     public function update(Request $request, Sewa $sewa)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_kendaraan' => 'required|max:255',
+            'harga' => 'required',
+            'penumpang' => 'required',
+            'image' => 'image',
+        ]);
+
+        $sewa->update($validatedData);
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $sewa->image = $request->file('image')->store('foto-sewa');
+            $sewa->save();
+        }
+        return response()->json([
+            "success" => true,
+            "message" => "Berhasil update",
+            'data' => $sewa
+        ]);
     }
 
     /**
@@ -61,6 +109,11 @@ class SewaApiController extends Controller
      */
     public function destroy(Sewa $sewa)
     {
-        //
+        Sewa::destroy($sewa->id);
+        return response()->json([
+            "success" => true,
+            "message" => "Berhasil dihapus",
+            'data' => $sewa
+        ]);
     }
 }

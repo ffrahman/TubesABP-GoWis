@@ -43,15 +43,10 @@ class DashboardSewaController extends Controller
             'nama_kendaraan' => 'required|max:255',
             'harga' => 'required',
             'penumpang' => 'required',
-            'image' => 'required|image',
+            'image' => 'image',
         ]);
 
         $validatedData['image'] = $request->file('image')->store('foto-sewa');
-
-        // if ($request->file('image')) {
-        //     $validatedData['image'] = $request->file('image')->store('sewa-images');
-        // }
-
         Sewa::create($validatedData);
 
         return redirect('/dashboard/sewa')->with('success', 'Data berhasil ditambahkan');

@@ -20,3 +20,7 @@ use App\Http\Controllers\PaketApiController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('/news', NewsApiController::class);
+Route::resource('/sewa', SewaApiController::class);
+Route::resource('/paket', PaketApiController::class);
